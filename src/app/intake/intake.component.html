@@ -1,3 +1,85 @@
-<p>
-  intake works!
-</p>
+<h1>Intake Form</h1>
+  <h2><u>Primary Home:</u></h2>
+  <form class="form-horizontal" [formGroup]="addressForm">
+    <div class="form-group">
+      <label for="inputAddress">Address:
+        <input type="text" formControlName = "address" id="address" placeholder="address">
+      </label>
+    </div>
+  </form>
+  <h2><u>Select the Tasks you want to complete in Primary Home:</u></h2>
+  <mat-accordion>
+    <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle="true">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <h2>Appliance X</h2>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <mat-card>
+        <mat-card-title><h3>Task 1</h3></mat-card-title>
+        <mat-card-content> Description of Task 1</mat-card-content>
+        <button mat-raised-button color="primary" (click)="helpMeHomr()">Help Me Homr</button>
+      </mat-card>
+
+      <mat-card>
+          <mat-card-title><h3>Task 2</h3></mat-card-title>
+          <mat-card-content> Description of Task 2</mat-card-content>
+          <button mat-raised-button color="primary" (click)="helpMeHomr()">Help Me Homr</button>
+      </mat-card>
+
+      <mat-action-row>
+        <button mat-raised-button color="primary" (click)="nextStep()">Next Appliance</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  
+    <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle="true">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <h2>Appliance Y</h2>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <mat-card>
+        <mat-card-title><h3>Task 1</h3></mat-card-title>
+        <mat-card-content> Description of Task 1</mat-card-content>
+        <button mat-raised-button color="primary" (click)="helpMeHomr()">Help Me Homr</button>
+      </mat-card>
+  
+      <mat-card>
+        <mat-card-title><h3>Task 2</h3></mat-card-title>
+        <mat-card-content> Description of Task 2</mat-card-content>
+        <button mat-raised-button color="primary" (click)="helpMeHomr()">Help Me Homr</button>
+      </mat-card>
+  
+      <mat-action-row>
+        <button mat-raised-button color="warn" (click)="prevStep()">Previous</button>
+        <button mat-raised-button color="primary" (click)="nextStep()">Next</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  
+    <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle="true">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <h2>Appliance Z</h2>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+  
+      <mat-card>
+        <mat-card-title><h3>Task 1</h3></mat-card-title>
+        <mat-card-content> Description of Task 1</mat-card-content>
+        <button mat-raised-button color="primary" (click)="helpMeHomr()">Help Me Homr</button>
+      </mat-card>
+    
+      <mat-card>
+        <mat-card-title><h3>Task 2</h3></mat-card-title>
+        <mat-card-content> Description of Task 2</mat-card-content>
+        <button mat-raised-button color="primary" (click)="helpMeHomr()">Help Me Homr</button>
+      </mat-card>
+  
+      <mat-action-row>
+        <button mat-raised-button color="warn" (click)="prevStep()">Previous Appliance</button>
+        <button mat-raised-button color="primary" (click)="nextStep()">Take Me to Homr</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  </mat-accordion>

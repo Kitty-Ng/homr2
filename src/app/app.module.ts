@@ -1,11 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { IntakeComponent } from './intake/intake.component';
-import {MatButtonModule, MatCheckboxModule} from '@angular/material';
-import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule, MatCheckboxModule, MatInputModule, MatCardModule, MatExpansionModule} from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -18,6 +18,10 @@ import {MatInputModule} from '@angular/material/input';
     MatButtonModule, 
     MatCheckboxModule,
     MatInputModule,
+    ReactiveFormsModule,
+    MatCardModule,
+    MatExpansionModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
