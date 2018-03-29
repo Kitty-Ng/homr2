@@ -1,3 +1,4 @@
+import { NgModule } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./intake.component.css']
 })
 export class IntakeComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit() {
+    console.log('hello world');
   }
 
 }
